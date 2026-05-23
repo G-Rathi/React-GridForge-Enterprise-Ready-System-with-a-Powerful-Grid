@@ -1,0 +1,33 @@
+@use "sass:color";
+@use 'variables' as *;
+
+:root {
+  // Theme colors
+  --primary-color: #{$primary-color};
+  --primary-color-light: #{rgba($primary-color, 0.1)};
+  --primary-color-dark: #{color.adjust($primary-color, $lightness: -10%)};
+  
+  // Text colors
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  
+  // Background colors
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb;
+  
+  // Border colors
+  --border-color: #e5e7eb;
+  
+  // Error colors
+  --error-color: #{$danger-color};
+  --error-bg: #{rgba($danger-color, 0.1)};
+}
+
+// Dark theme variables
+[data-theme="dark"] {
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --bg-white: #1f2937;
+  --bg-light: #111827;
+  --border-color: #374151;
+}

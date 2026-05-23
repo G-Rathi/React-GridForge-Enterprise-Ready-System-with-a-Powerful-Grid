@@ -1,0 +1,120 @@
+@use "sass:color";
+.todosContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.todosHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+  }
+}
+
+.headerActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  label {
+    font-weight: 500;
+    color: #333;
+  }
+}
+
+.filterSelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  transition: border-color 0.2s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  }
+}
+
+.errorMessage {
+  padding: 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.todosList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 0.5rem;
+  color: #6c757d;
+
+  p {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .todosContainer {
+    padding: 1rem;
+  }
+
+  .todosHeader {
+    flex-direction: column;
+    align-items: stretch;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .headerActions {
+    flex-direction: column;
+    width: 100%;
+
+    .filterGroup {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+
+      select {
+        width: 100%;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
+

@@ -1,0 +1,51 @@
+@use '../../../styles/constants.scss' as *;
+
+.BreadcrumbOuterContainer {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 10px 0px 5px;
+  box-sizing: border-box;
+}
+
+.leftContent {
+  .FrontText {
+    display: flex;
+    flex-direction: column;
+    color: $Color-Black1;
+    font-size: $FontSize-MasterBreadcrumb;
+    font-weight: $FontWeight-MasterTextBreadcrumb;
+    position: relative;
+  }
+
+  .childrenBreadcrumbContent {
+    position: absolute;
+    bottom: -15px;
+    left: 1px;
+    display: flex;
+    gap: 8px;
+
+    .childMenuText {
+      font-size: 12px;
+      font-weight: 400;
+      white-space: nowrap;
+
+      &:hover {
+        color: $color-theme;
+        cursor: pointer;
+      }
+    }
+
+    .childNameseparator {
+      font-size: 10px;
+    }
+  }
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
