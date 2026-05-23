@@ -1,0 +1,53 @@
+.custom-toast {
+  min-width: 280px;
+  max-width: 350px;
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 12px 14px 10px;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+/* Content row */
+.toast-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Close button */
+.toast-close {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #666;
+}
+
+.toast-close:hover {
+  color: #000;
+}
+
+/* Progress bar */
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  transform-origin: left;
+  animation: progress linear forwards;
+}
+
+/* Animation */
+@keyframes progress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}

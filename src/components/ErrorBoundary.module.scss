@@ -1,0 +1,40 @@
+@use "sass:color";
+.error-boundary {
+  padding: 2rem;
+  margin: 2rem;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  background-color: #fff5f5;
+  color: #c53030;
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  details {
+    margin-top: 1rem;
+    
+    summary {
+      cursor: pointer;
+      user-select: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    pre {
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+}

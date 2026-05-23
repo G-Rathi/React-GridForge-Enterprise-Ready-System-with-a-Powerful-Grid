@@ -1,0 +1,36 @@
+@use "sass:color";
+@use '_variables' as *;
+@use '_mixins' as *;
+@use '_theme' as *;
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacing-unit;
+}
+
+p {
+  margin-bottom: $spacing-unit;
+}

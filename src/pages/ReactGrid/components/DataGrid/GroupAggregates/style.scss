@@ -1,0 +1,141 @@
+.group-aggregates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  font-size: 13px;
+  color: #495057;
+  font-weight: 500;
+  align-items: center;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #495057;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      border-color: #b8c2cc;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+  }
+}
+
+/* Responsive Design for GroupAggregates */
+
+/* Large Screens (1200px+) */
+@media (min-width: 1200px) {
+  .group-aggregates {
+    gap: 14px;
+    padding: 10px 16px;
+    
+    &__item {
+      padding: 5px 10px;
+      font-size: 13px;
+    }
+  }
+}
+
+/* Tablets and Medium Screens (768px - 1200px) */
+@media (max-width: 1200px) {
+  .group-aggregates {
+    gap: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+    
+    &__item {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+}
+
+/* Small Tablets (600px - 768px) */
+@media (max-width: 768px) {
+  .group-aggregates {
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+    justify-content: flex-start;
+    
+    &__item {
+      padding: 5px 8px;
+      font-size: 12px;
+      flex: 0 1 auto;
+    }
+  }
+}
+
+/* Mobile Devices (480px - 600px) */
+@media (max-width: 600px) {
+  .group-aggregates {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px;
+    font-size: 13px;
+    
+    &__item {
+      width: 100%;
+      padding: 8px 12px;
+      justify-content: space-between;
+      font-size: 13px;
+      border-radius: 6px;
+      
+      &::before {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* Small Mobile (360px - 480px) */
+@media (max-width: 480px) {
+  .group-aggregates {
+    padding: 8px;
+    gap: 6px;
+    
+    &__item {
+      padding: 10px 12px;
+      font-size: 14px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+/* Extra Small Mobile (320px - 360px) */
+@media (max-width: 360px) {
+  .group-aggregates {
+    padding: 6px;
+    font-size: 12px;
+    
+    &__item {
+      padding: 8px 10px;
+      font-size: 13px;
+      min-height: 40px;
+    }
+  }
+}
+
+/* Compact Mode for Very Narrow Screens */
+@media (max-width: 320px) {
+  .group-aggregates {
+    gap: 4px;
+    
+    &__item {
+      padding: 6px 8px;
+      font-size: 12px;
+      gap: 4px;
+    }
+  }
+}

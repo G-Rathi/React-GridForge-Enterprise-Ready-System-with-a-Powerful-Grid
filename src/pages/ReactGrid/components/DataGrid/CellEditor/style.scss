@@ -1,0 +1,102 @@
+.cell-editor__input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #0969da;
+  border-radius: 3px;
+  font-size: 13px;
+  outline: none;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 0 2px rgba(9, 105, 218, 0.1);
+  transition: all 0.2s ease;
+
+  &:focus {
+    border-color: #0860ca;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+  }
+}
+
+/* Responsive Design for CellEditor */
+
+/* Tablets and Medium Screens (768px - 1200px) */
+@media (max-width: 1200px) {
+  .cell-editor__input {
+    padding: 7px 10px;
+    font-size: 13px;
+    min-height: 36px;
+  }
+}
+
+/* Small Tablets (600px - 768px) */
+@media (max-width: 768px) {
+  .cell-editor__input {
+    padding: 8px 12px;
+    font-size: 14px;
+    min-height: 40px;
+    border-radius: 4px;
+    border-width: 2px;
+  }
+}
+
+/* Mobile Devices (480px - 600px) */
+@media (max-width: 600px) {
+  .cell-editor__input {
+    padding: 10px 12px;
+    font-size: 16px;
+    min-height: 44px;
+    border-radius: 6px;
+    border-width: 2px;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+    touch-action: manipulation;
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(9, 105, 218, 0.2);
+    }
+  }
+}
+
+/* Small Mobile (360px - 480px) */
+@media (max-width: 480px) {
+  .cell-editor__input {
+    padding: 12px 14px;
+    font-size: 16px;
+    min-height: 48px;
+    border-radius: 8px;
+    
+    &[type="number"],
+    &[type="date"] {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Extra Small Mobile (320px - 360px) */
+@media (max-width: 360px) {
+  .cell-editor__input {
+    padding: 12px;
+    font-size: 15px;
+    min-height: 46px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .cell-editor__input {
+    min-height: 48px;
+    padding: 12px;
+    font-size: 16px;
+    border-width: 2px;
+    border-radius: 8px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    
+    &:focus {
+      border-width: 2px;
+      box-shadow: 0 0 0 4px rgba(9, 105, 218, 0.2);
+    }
+    
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+}
